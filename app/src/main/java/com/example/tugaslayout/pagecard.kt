@@ -1,6 +1,7 @@
 package com.example.tugaslayout
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
@@ -15,11 +16,7 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun CardNama(
-    Nama: String,
-    alamat: String,
-    nomortelp: String,
-    warnano: Color,
-    modifier: Modifier = Modifier
+
 )
 {
     Column(modifier = Modifier
@@ -36,5 +33,7 @@ fun CardNama(
             text = stringResource(R.string.univ),
             fontSize = 19.sp,
         )
+        Spacer(modifier = Modifier.padding(30.dp))
+
     }
 }
