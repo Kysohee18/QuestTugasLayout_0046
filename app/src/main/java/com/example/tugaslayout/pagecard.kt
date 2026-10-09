@@ -30,5 +30,9 @@ fun CardNama(
             fontSize = 30.sp,
             fontWeight = FontWeight.Bold
         )
+        Text(
+            text = stringResource(R.string.univ),
+            fontSize = 19.sp,
+        )
     }
 }
