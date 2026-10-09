@@ -24,68 +24,37 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-@Composable
-fun MainNama(
-    modifier: Modifier)
-{
-    Column(modifier = Modifier
-        .padding(top = 100.dp)
-        .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally)
-    {
-        Text(
-            text = stringResource(R.string.prodi),
-            fontSize = 30.sp,
-            fontWeight = FontWeight.Bold
-        )
-        Text(
-            text = stringResource(R.string.univ),
-            fontSize = 19.sp,
-        )
-        Spacer(modifier = Modifier.padding(30.dp))
-
-        CardNama(
-            nama = stringResource(R.string.nama2),
-            alamat = stringResource(R.string.alamat2),
-            warnaBg =ColorResource(R.color.card_1_bg),
-            noHp = stringResource(R.string.nomortelp2),
-            warnatext = ColorResource(R.color.text_color)
-        )
-    }
-}
-
-@Composable
-fun ColorResource(x0: Int) {
-    TODO("Not yet implemented")
-}
-
-fun colorResource(id: Any): Color {}
 
 @Composable
 fun CardNama(
     nama: String,
     alamat: String,
-    warnatext: Unit,
-    warnaBg: Unit,
-    noHp: String,
+    gambar: Int = R.drawable.hal,
+    warnaBg: Int,
+    noHp: String = " ",
     modifier: Modifier = Modifier
 ) {
 
-    Card(modifier = Modifier
-        .fillMaxWidth(1f)
-        .padding(horizontal = 12.dp, vertical = 5.dp),
+    Card(
+        modifier = modifier
+            .fillMaxWidth(1f)
+            .padding(horizontal = 12.dp, vertical = 5.dp),
         colors = CardDefaults.cardColors(
             containerColor = colorResource(id = warnaBg)
         )
     ) {
-        Row(modifier = Modifier.padding(12.dp)
-            .fillMaxWidth(),
+        Row(
+            modifier = Modifier
+                .padding(12.dp)
+                .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            val gambar = painterResource(R.drawable.hal)
-            Image(painter = gambar, contentDescription = null,
-                modifier = Modifier.padding(5.dp)
-                    .size(100.dp)
+            Image(
+                painter = painterResource(id = R.drawable.hal),
+                contentDescription = null,
+                modifier = Modifier
+                    .padding(1.dp)
+                    .size(78.dp)
             )
             Spacer(modifier = Modifier.width(20.dp))
             Column() {
@@ -93,20 +62,32 @@ fun CardNama(
                     text = nama,
                     fontSize = 20.sp,
                     fontFamily = FontFamily.Cursive,
-                    Color = warnatext,
+                    fontWeight = FontWeight.Bold,
+                    color = colorResource(id = R.color.text_color),
                 )
+
                 Text(
                     text = noHp,
                     fontSize = 16.sp,
-                    color = warnatext,
+                    color = colorResource(id = R.color.teal_200),
                 )
+
                 Text(
                     text = alamat,
                     fontSize = 16.sp,
-                    color = warnatext,
+                    color = colorResource(id = R.color.text_color),
                 )
+
             }
-                )
+            Spacer(modifier = Modifier.width(25.dp))
+            Image(
+                painter = painterResource(id = R.drawable.hal),
+                contentDescription = null,
+                modifier = Modifier
+                    .padding(1.dp)
+                    .size(78.dp)
+            )
+
 
 
         }

@@ -12,5 +12,10 @@
     <color name="card_1_bg">#A44949</color>
     <color name="card_2_bg">#3ED3D3</color>
     <color name="card_3_bg">#3E3E99</color>
-    <color name="text_color">#9E2089</color>
+    <color name="text_color">#231920</color>
+
+    <color name="warnatext0">#000000</color>
+    <color name="warnatext1">#FFFFFF</color>
+    <color name="warnatext2">#000000</color>
+    <color name="warnatext3">#000000</color>
 </resources>

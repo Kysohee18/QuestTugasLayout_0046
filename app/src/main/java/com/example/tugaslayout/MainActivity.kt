@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             TugaslayoutTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) {
-                    MainNama(modifier = Modifier.padding(it))
+                    ActivitasPertama(modifier = Modifier.padding(it))
 
 
 
