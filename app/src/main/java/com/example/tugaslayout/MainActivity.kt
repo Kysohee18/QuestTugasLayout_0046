@@ -20,10 +20,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             TugaslayoutTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    cardnama(modifier = Modifier.padding(innerPadding))
+
+
+
                 }
             }
         }
@@ -42,6 +42,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     TugaslayoutTheme {
-        Greeting("Android")
+        cardnama()
     }
 }
