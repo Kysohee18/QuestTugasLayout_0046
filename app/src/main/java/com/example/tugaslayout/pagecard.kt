@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -43,6 +44,12 @@ fun MainNama(
         )
         Spacer(modifier = Modifier.padding(30.dp))
 
+        CardNama(
+            nama = stringResource(R.string.nama2),
+            alamat = stringResource(R.string.alamat2),
+            warnaBg = R.color.card_1_bg,
+            noHp = R.string.nomortelp2
+        )
     }
 }
 
@@ -52,7 +59,8 @@ fun CardNama(
     alamat: String,
     warnaBg: Color,
     noHp: String,
-    modifier: Modifier) {
+    modifier: Modifier = Modifier
+) {
 
     Card(modifier = Modifier
         .fillMaxWidth(1f)
@@ -71,7 +79,7 @@ fun CardNama(
                     .size(100.dp)
             )
             Spacer(modifier = Modifier.width(20.dp))
-            Column {
+            Column() {
                 Text(
 
                 )
