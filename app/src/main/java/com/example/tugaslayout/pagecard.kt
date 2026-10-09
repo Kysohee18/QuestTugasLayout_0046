@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -20,6 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -47,17 +47,26 @@ fun MainNama(
         CardNama(
             nama = stringResource(R.string.nama2),
             alamat = stringResource(R.string.alamat2),
-            warnaBg = R.color.card_1_bg,
-            noHp = R.string.nomortelp2
+            warnaBg =ColorResource(R.color.card_1_bg),
+            noHp = stringResource(R.string.nomortelp2),
+            warnatext = ColorResource(R.color.text_color)
         )
     }
 }
 
 @Composable
+fun ColorResource(x0: Int) {
+    TODO("Not yet implemented")
+}
+
+fun colorResource(id: Any): Color {}
+
+@Composable
 fun CardNama(
     nama: String,
     alamat: String,
-    warnaBg: Color,
+    warnatext: Unit,
+    warnaBg: Unit,
     noHp: String,
     modifier: Modifier = Modifier
 ) {
@@ -66,7 +75,7 @@ fun CardNama(
         .fillMaxWidth(1f)
         .padding(horizontal = 12.dp, vertical = 5.dp),
         colors = CardDefaults.cardColors(
-            containerColor = warnaBg
+            containerColor = colorResource(id = warnaBg)
         )
     ) {
         Row(modifier = Modifier.padding(12.dp)
@@ -81,9 +90,24 @@ fun CardNama(
             Spacer(modifier = Modifier.width(20.dp))
             Column() {
                 Text(
-
+                    text = nama,
+                    fontSize = 20.sp,
+                    fontFamily = FontFamily.Cursive,
+                    Color = warnatext,
                 )
                 Text(
+                    text = noHp,
+                    fontSize = 16.sp,
+                    color = warnatext,
+                )
+                Text(
+                    text = alamat,
+                    fontSize = 16.sp,
+                    color = warnatext,
+                )
+            }
+                )
+
 
         }
     }
