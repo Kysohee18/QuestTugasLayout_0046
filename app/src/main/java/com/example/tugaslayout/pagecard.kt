@@ -7,6 +7,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -14,9 +15,10 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun CardNama(
-    nama: String,
+    Nama: String,
     alamat: String,
-    noHp: String,
+    nomortelp: String,
+    warnano: Color,
     modifier: Modifier = Modifier
 )
 {
